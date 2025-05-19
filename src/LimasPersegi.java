@@ -36,6 +36,14 @@ public class LimasPersegi extends Persegi implements BangunRuang {
         return tinggiSisiTegak;
     }
 
+    public double getVolume() {
+        return volume;
+    }
+
+    public double getLuasPermukaan() {
+        return luasPermukaan;
+    }
+
     // Setters
     public void setTinggiLimas(double tinggiLimas) {
         this.tinggiLimas = tinggiLimas;
