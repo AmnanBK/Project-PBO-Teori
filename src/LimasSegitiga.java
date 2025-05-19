@@ -6,8 +6,7 @@ public class LimasSegitiga extends Segitiga implements BangunRuang {
     private double volume;
     private double luasPermukaan;
 
-    public LimasSegitiga(double sisiA, double sisiB, double sisiC, double tinggiLimas,
-                         double tinggiSisiTegakA, double tinggiSisiTegakB, double tinggiSisiTegakC) {
+    public LimasSegitiga(double sisiA, double sisiB, double sisiC, double tinggiLimas, double tinggiSisiTegakA, double tinggiSisiTegakB, double tinggiSisiTegakC) {
         super("Limas Segitiga", sisiA, sisiB, sisiC);
         this.tinggiLimas = tinggiLimas;
         this.tinggiSisiTegakA = tinggiSisiTegakA;
@@ -18,22 +17,20 @@ public class LimasSegitiga extends Segitiga implements BangunRuang {
 
     @Override
     public double hitungVolume() {
-        return volume;
+        return (1.0 / 3.0) * getLuas() * tinggiLimas;
     }
 
     @Override
     public double hitungLuasPermukaan() {
-        return luasPermukaan;
-    }
-
-    private void updatePerhitungan() {
-        this.volume = (1.0 / 3.0) * getLuas() * tinggiLimas;
-
         double luasSisiA = 0.5 * getSisiA() * tinggiSisiTegakA;
         double luasSisiB = 0.5 * getSisiB() * tinggiSisiTegakB;
         double luasSisiC = 0.5 * getSisiC() * tinggiSisiTegakC;
+        return getLuas() + luasSisiA + luasSisiB + luasSisiC;
+    }
 
-        this.luasPermukaan = getLuas() + luasSisiA + luasSisiB + luasSisiC;
+    private void updatePerhitungan() {
+        this.volume = hitungVolume();
+        this.luasPermukaan = hitungLuasPermukaan();
     }
 
     // Getters
