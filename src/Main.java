@@ -2,14 +2,22 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("=== Hitung Bangun Geometri ===");
+        System.out.println();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        PrismaSegitiga prismaSegitiga = new PrismaSegitiga(3, 4, 5, 10);
+        System.out.println("Prisma Segitiga");
+        System.out.println("Luas: " + prismaSegitiga.getLuas());
+        System.out.println("Keliling: " + prismaSegitiga.getKeliling());
+        System.out.println("Volume: " + prismaSegitiga.getVolume());
+        System.out.println("Luas Permukaan: " + prismaSegitiga.getLuasPermukaan());
+
+        prismaSegitiga.setSisiA(4);
+        System.out.println("Prisma Segitiga setelah diubah");
+        System.out.println("Luas: " + prismaSegitiga.getLuas());
+        System.out.println("Keliling: " + prismaSegitiga.getKeliling());
+        System.out.println("Volume: " + prismaSegitiga.getVolume());
+        System.out.println("Luas Permukaan: " + prismaSegitiga.getLuasPermukaan());
+
     }
 }
