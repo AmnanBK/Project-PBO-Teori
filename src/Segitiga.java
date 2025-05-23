@@ -1,10 +1,10 @@
 public class Segitiga extends BentukGeometri implements BangunDatar {
-    private double sisiA;
-    private double sisiB;
-    private double sisiC;
+    protected double sisiA;
+    protected double sisiB;
+    protected double sisiC;
     private double tinggi;
-    private double luas;
-    private double keliling;
+    protected double luas;
+    protected double keliling;
 
     public Segitiga(String nama, double sisiA, double sisiB, double sisiC) {
         super(nama);
@@ -33,23 +33,6 @@ public class Segitiga extends BentukGeometri implements BangunDatar {
         this.keliling = hitungKeliling();
         this.luas = hitungLuas();
         this.tinggi = hitungTinggi();
-    }
-
-    // getter
-    public double getSisiA() {
-        return sisiA;
-    }
-    public double getSisiB() {
-        return sisiB;
-    }
-    public double getSisiC() {
-        return sisiC;
-    }
-    public double getLuas() {
-        return luas;
-    }
-    public double getKeliling() {
-        return keliling;
     }
 
     // setter

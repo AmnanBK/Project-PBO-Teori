@@ -5,19 +5,19 @@ public class Main {
         System.out.println("=== Hitung Bangun Geometri ===");
         System.out.println();
 
-        PrismaSegitiga prismaSegitiga = new PrismaSegitiga(3, 4, 5, 10);
-        System.out.println("Prisma Segitiga");
-        System.out.println("Luas: " + prismaSegitiga.getLuas());
-        System.out.println("Keliling: " + prismaSegitiga.getKeliling());
-        System.out.println("Volume: " + prismaSegitiga.getVolume());
-        System.out.println("Luas Permukaan: " + prismaSegitiga.getLuasPermukaan());
+        LimasSegitiga geometri = new LimasSegitiga(5, 5, 5, 10, 10, 10, 10);
+        System.out.println("Hitung Geometri");
+        System.out.println("Luas: " + geometri.luas);
+        System.out.println("Keliling: " + geometri.keliling);
+        System.out.println("Volume: " + geometri.volume);
+        System.out.println("Luas Permukaan: " + geometri.luasPermukaan);
 
-        prismaSegitiga.setSisiA(4);
-        System.out.println("Prisma Segitiga setelah diubah");
-        System.out.println("Luas: " + prismaSegitiga.getLuas());
-        System.out.println("Keliling: " + prismaSegitiga.getKeliling());
-        System.out.println("Volume: " + prismaSegitiga.getVolume());
-        System.out.println("Luas Permukaan: " + prismaSegitiga.getLuasPermukaan());
+        geometri.setTinggiLimas(4);
+        System.out.println("\nSetelah diubah");
+        System.out.println("Luas: " + geometri.luas);
+        System.out.println("Keliling: " + geometri.keliling);
+        System.out.println("Volume: " + geometri.volume);
+        System.out.println("Luas Permukaan: " + geometri.luasPermukaan);
 
     }
 }
