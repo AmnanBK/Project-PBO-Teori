@@ -1,7 +1,7 @@
 public class Persegi extends BentukGeometri implements BangunDatar {
-    private double sisi;
-    private double luas;
-    private double keliling;
+    protected double sisi;
+    protected double luas;
+    protected double keliling;
 
     public Persegi(String nama, double sisi) {
         super(nama);
@@ -22,19 +22,6 @@ public class Persegi extends BentukGeometri implements BangunDatar {
     private void updatePerhitungan() {
         this.luas = hitungLuas();
         this.keliling = hitungKeliling();
-    }
-
-    // Getter
-    public double getSisi() {
-        return sisi;
-    }
-
-    public double getLuas() {
-        return luas;
-    }
-
-    public double getKeliling() {
-        return keliling;
     }
 
     // Setter

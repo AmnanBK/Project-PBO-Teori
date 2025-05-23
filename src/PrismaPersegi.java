@@ -1,7 +1,7 @@
 public class PrismaPersegi extends Persegi implements BangunRuang {
     private double tinggiPrisma;
-    private double volume;
-    private double luasPermukaan;
+    protected double volume;
+    protected double luasPermukaan;
 
     public PrismaPersegi(double sisi, double tinggiPrisma) {
         super("Prisma Persegi", sisi);
@@ -11,13 +11,13 @@ public class PrismaPersegi extends Persegi implements BangunRuang {
 
     @Override
     public double hitungVolume() {
-        return getLuas() * tinggiPrisma;
+        return super.luas * tinggiPrisma;
     }
 
     @Override
     public double hitungLuasPermukaan() {
-        double kelilingAlas = getKeliling();
-        double luasAlas = getLuas();
+        double kelilingAlas = super.keliling;
+        double luasAlas = super.luas;
         double luasSelimut = kelilingAlas * tinggiPrisma;
         return 2 * luasAlas + luasSelimut;
     }
@@ -25,19 +25,6 @@ public class PrismaPersegi extends Persegi implements BangunRuang {
     private void updatePerhitungan() {
         this.volume = hitungVolume();
         this.luasPermukaan = hitungLuasPermukaan();
-    }
-
-    // Getters
-    public double getTinggiPrisma() {
-        return tinggiPrisma;
-    }
-
-    public double getVolume() {
-        return volume;
-    }
-
-    public double getLuasPermukaan() {
-        return luasPermukaan;
     }
 
     // Setters
