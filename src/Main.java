@@ -1,5 +1,5 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import bangun.ruang.LimasSegitiga;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("=== Hitung Bangun Geometri ===");
@@ -11,6 +11,7 @@ public class Main {
         System.out.println("Keliling: " + geometri.keliling);
         System.out.println("Volume: " + geometri.volume);
         System.out.println("Luas Permukaan: " + geometri.luasPermukaan);
+        System.out.println();
 
         geometri.setTinggiLimas(4);
         System.out.println("\nSetelah diubah");

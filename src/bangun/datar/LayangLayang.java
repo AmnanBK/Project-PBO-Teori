@@ -1,0 +1,32 @@
+package bangun.datar;
+
+import bangun.dasar.BangunDatar;
+import bangun.dasar.BentukGeometri;
+
+public class LayangLayang extends BentukGeometri implements BangunDatar {
+    protected double diagonalPanjang;
+    protected double diagonalPendek;
+    protected double sisiPanjang;
+    protected double sisiPendek;
+    public double luas;
+    public double keliling;
+
+
+    public LayangLayang(String nama, double diagonalPanjang, double diagonalPendek, double sisiPanjang, double sisiPendek) {
+        super(nama);
+        this.diagonalPanjang = diagonalPanjang;
+        this.diagonalPendek = diagonalPendek;
+        this.sisiPanjang = sisiPanjang;
+        this.sisiPendek = sisiPendek;
+    }
+
+    @Override
+    public double hitungLuas() {
+        return 0.5 * diagonalPanjang * diagonalPendek;
+    }
+
+    @Override
+    public double hitungKeliling() {
+        return 2 * (sisiPanjang + sisiPendek);
+    }
+}
