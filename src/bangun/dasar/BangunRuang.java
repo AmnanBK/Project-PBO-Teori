@@ -1,6 +1,6 @@
 package bangun.dasar;
 
 public interface BangunRuang {
-    double hitungVolume();
-    double hitungLuasPermukaan();
+    abstract double hitungVolume();
+    abstract double hitungLuasPermukaan();
 }

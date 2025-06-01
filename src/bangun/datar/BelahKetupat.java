@@ -15,6 +15,7 @@ public class BelahKetupat extends BentukGeometri implements BangunDatar {
         this.sisi = sisi;
         this.diagonal1 = diagonal1;
         this.diagonal2 = diagonal2;
+        updatePerhitungan();
     }
 
     @Override
@@ -25,5 +26,26 @@ public class BelahKetupat extends BentukGeometri implements BangunDatar {
     @Override
     public double hitungKeliling() {
         return 4 * sisi;
+    }
+
+    private void updatePerhitungan() {
+        this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
+    }
+
+    // Setter
+    public void setsisi(double sisi) {
+        this.sisi = sisi;
+        updatePerhitungan();
+    }
+
+    public void setdiagonal1(double diagonal1) {
+        this.diagonal1 = diagonal1;
+        updatePerhitungan();
+    }
+
+    public void setdiagonal2(double diagonal2) {
+        this.diagonal2 = diagonal2;
+        updatePerhitungan();
     }
 }

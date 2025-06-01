@@ -19,6 +19,7 @@ public class Trapesium extends BentukGeometri implements BangunDatar {
         this.sisiC = sisiC;
         this.sisiD = sisiD;
         this.tinggi = tinggi;
+        updatePerhitungan();
     }
 
     @Override
@@ -29,5 +30,31 @@ public class Trapesium extends BentukGeometri implements BangunDatar {
     @Override
     public double hitungKeliling() {
         return sisiA + sisiB + sisiC + sisiD;
+    }
+
+    private void updatePerhitungan() {
+        this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
+    }
+
+    // Setter
+    public void setSisiA(double sisiA) {
+        this.sisiA = sisiA;
+        updatePerhitungan();
+    }
+
+    public void setSisiB(double sisiB) {
+        this.sisiB = sisiB;
+        updatePerhitungan();
+    }
+
+    public void setSisiC(double sisiC) {
+        this.sisiC = sisiC;
+        updatePerhitungan();
+    }
+
+    public void setSisiD(double sisiD) {
+        this.sisiD = sisiD;
+        updatePerhitungan();
     }
 }

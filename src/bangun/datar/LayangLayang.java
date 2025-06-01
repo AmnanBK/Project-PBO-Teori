@@ -18,6 +18,7 @@ public class LayangLayang extends BentukGeometri implements BangunDatar {
         this.diagonalPendek = diagonalPendek;
         this.sisiPanjang = sisiPanjang;
         this.sisiPendek = sisiPendek;
+        updatePerhitungan();
     }
 
     @Override
@@ -28,5 +29,31 @@ public class LayangLayang extends BentukGeometri implements BangunDatar {
     @Override
     public double hitungKeliling() {
         return 2 * (sisiPanjang + sisiPendek);
+    }
+
+    private void updatePerhitungan() {
+        this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
+    }
+
+    // Setter
+    public void setdiagonalPanjang(double diagonalPanjang) {
+        this.diagonalPanjang = diagonalPanjang;
+        updatePerhitungan();
+    }
+
+    public void setDiagonalPendek(double diagonalPendek) {
+        this.diagonalPendek = diagonalPendek;
+        updatePerhitungan();
+    }
+
+    public void setSisiPanjang(double sisiPanjang) {
+        this.sisiPanjang = sisiPanjang;
+        updatePerhitungan();
+    }
+
+    public void setSisiPendek(double sisiPendek) {
+        this.sisiPendek = sisiPendek;
+        updatePerhitungan();
     }
 }

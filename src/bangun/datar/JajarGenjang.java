@@ -15,6 +15,7 @@ public class JajarGenjang extends BentukGeometri implements BangunDatar {
         this.sisiDatar = sisiDatar;
         this.sisiMiring = sisiMiring;
         this.tinggi = tinggi;
+        updatePerhitungan();
     }
 
     @Override
@@ -25,5 +26,26 @@ public class JajarGenjang extends BentukGeometri implements BangunDatar {
     @Override
     public double hitungKeliling() {
         return 2 * (sisiDatar + sisiMiring);
+    }
+
+    private void updatePerhitungan() {
+        this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
+    }
+
+    // Setter
+    public void setSisiDatar(double sisiDatar) {
+        this.sisiDatar = sisiDatar;
+        updatePerhitungan();
+    }
+
+    public void setSisiMiring(double sisiMiring) {
+        this.sisiMiring = sisiMiring;
+        updatePerhitungan();
+    }
+
+    public void setTinggi(double tinggi) {
+        this.tinggi = tinggi;
+        updatePerhitungan();
     }
 }

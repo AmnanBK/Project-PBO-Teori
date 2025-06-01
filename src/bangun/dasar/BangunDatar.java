@@ -1,6 +1,6 @@
 package bangun.dasar;
 
 public interface BangunDatar {
-    double hitungLuas();
-    double hitungKeliling();
+    abstract double hitungLuas();
+    abstract double hitungKeliling();
 }
